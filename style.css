@@ -1,0 +1,584 @@
+@font-face{
+    font-family: neu;
+    src:url(./NeueHaasDisplayMediu.ttf);
+}
+@font-face{
+    font-family: neu;
+    font-weight: 200;
+    src:url(./NeueHaasDisplayRoman.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: neu;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#wrapper{
+    flex: 1;
+}
+#content {
+    min-height: 100vh; /* Ensure the content area takes at least the full height of the viewport */
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+#content {
+    flex: 1; /* This ensures that the content takes up the available space */
+}
+#page1{
+min-height: 100vh;
+width: 100%;
+background-color:#EFEAE3;
+/* padding:  0 2vw; */
+}
+nav{
+    /* height: 100px; */
+    padding: 2vw 2vw;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.nav-part2{
+    display:flex;
+    align-items: center;
+    gap: 1vw;
+}
+.nav-part2 h3{
+   padding: 10px 20px;
+   border: 1px solid rgba(0, 0, 0, 0.308);
+   border-radius: 35%;
+   font-weight: 800;
+   color: rgba(7, 1, 1, 0.762);
+   font-size: 18px;
+   overflow: hidden;
+   position: relative;
+    
+}  
+.nav-part2 h3::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+background-color: black;
+/* mix-blend-mode: difference; */
+left: 0;
+bottom: -100%;
+border-radius: 50%;
+transition: all ease 0.4s;
+overflow: hidden;
+}
+.nav-part2 h3:hover::after{
+    bottom: 0%;
+    border-radius: 0%;
+}
+.nav-part2 h3 a{
+    color:black;
+    text-decoration: none;
+    position: relative;
+     z-index: 9;
+    }
+    .nav-part2 h3:hover a{
+        color: white;
+    }
+    #center{
+        height: 65vh;
+        width: 100%;
+        /* background-color: orange; */
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        border-bottom:1px solid black ;
+        padding-bottom: 2.5vw;
+        margin-left: 2vw;
+    } 
+    #left h3{
+        width: 25vw;
+        font-size: 1.8vw;
+       line-height: 2vw;
+    }
+   #center h1{
+    font-size: 10vw;
+    text-align: right;
+    line-height: 9vw;
+   margin-right: 5rem;
+   } 
+   #page1 video{
+    width: 100%;
+    border-radius: 30px;
+    height: 100%;
+    padding: .5rem .5rem ;
+    position: relative;
+   }
+   #hero-shape{
+    position: absolute;
+    width:46vw;
+    height: 36vw;
+    background-color: #FE320A;
+    /* border-radius: 50%; */
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    right: 0;
+    top: 65vh;
+    filter: blur(20px);
+   }
+   #hero-1{
+    height: 100%;
+    width: 100%;
+    background-color:  #FE320A;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    position: absolute;
+   }
+   #hero-2{
+    height: 30vw;
+    width: 30vw;
+    background-color:  #FE320A;
+   border-radius: 50%;
+   position: absolute;
+   animation-name: anime2;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    background:linear-gradient(#FE320A);
+    filter: blur(25px);
+   }
+   #hero-3{
+    height: 30vw;
+    width: 30vw;
+    background:linear-gradient(#FE320A,rgba(255, 102, 0, 0.91));
+    border-radius: 50%;
+    position: absolute;
+    animation-name: anime1;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    filter: blur(25px);
+
+   }
+   @keyframes anime1 {
+from{
+    transform: translate(55%,-3%);
+}
+    to{
+        transform: translate(0%,10%);
+    }
+   }
+   @keyframes anime2 {
+    from{
+        transform: translate(5%,-5%);
+    }
+        to{
+            transform: translate(-20%,30%);
+        }
+       }
+       #page2{
+        min-height: 100vh;
+        width: 100%;
+        background-color:#EFEAE3;
+    position: relative;
+        padding: 8vw;
+       }  
+       #con{
+        /* background-color:lightblue; */
+      white-space: nowrap;
+      display: inline-block;
+      animation-name: move;
+      animation-duration: 10s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+
+       }
+       #moving-text{
+        background-color:#EFEAE3;
+        white-space: nowrap;
+        overflow-x: auto;
+        
+       }
+       #moving-text::-webkit-scrollbar{
+        display: none;
+       }
+       #moving-text h1{
+       font-size: 9vw;
+
+       display: inline-block;
+       }
+       #gola{
+        height: 70px;
+        width: 70px;
+        border-radius: 50%;
+        display: inline-block;
+        background-color: #FE320A;
+        margin: 1vw 2vw;
+       }
+       @keyframes move {
+        from{
+            transform: translateX(0);
+        }
+        to{
+            transform: translate(-100%);
+        }
+       }
+       #page2-bottom{
+        height: 80vh;
+        width: 100%;
+        background-color: #EFEAE3;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 4vw 3vw;
+        position: relative;
+      /* z-index: 1; */
+       }
+       #page2-bottom h1{ 
+    font-size: 4vw;
+    width: 50%;
+line-height: 4vw;
+position: relative;
+z-index: 9;   
+       }
+       #bottom-part2{
+        width:20%;
+        /* background-color: blue; */
+
+       }
+       #bottom-part2 img{
+        width: 100%;
+        border-radius: 20%;
+        margin-bottom: 10px;
+       }
+#bottom-part2 p{
+    font-weight: 200;
+}
+#page2 #goey{
+height: 30vw;
+width: 30vw;
+position: absolute ;
+ border-radius: 50%;
+ background:linear-gradient(to top right, #FE320A ,rgba(255, 77, 0, 0.76)) ;
+ top: 40%;
+ left: 25%;
+ filter: blur(20px);
+ z-index: 0;
+ animation-name: goey;
+ animation-duration: 5s;
+ animation-timing-function: ease-in-out;
+ animation-iteration-count: infinite;
+ animation-direction: alternate;
+}
+@keyframes goey {
+    from{
+        transform: translate(10%,-20%) skew(0);
+    }
+    to{
+        transform: translate(-10%,10%) skew(10deg);
+    }
+}
+#page3{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+ padding: 4vw 0;
+}
+.elem{
+    height: 150px;
+    width:100%;
+    /* background-color: orange; */
+    /* border-top: 1px solid #000; */
+    border-bottom: 1px solid #0000003d;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 0 2vw;
+   
+}
+.elem h2{
+    font-size: 3vw;
+    position: relative;
+    /* ' //jiske text  k piche lana ho to position:  or zindex zyda dete h ; */
+    z-index: 9;
+}
+ .elem #overlay{
+     height: 100%;
+     width: 100%;
+     background-color: orange;
+     position: absolute;
+     left: 0;
+     top: -200px;
+     transition: all ease 0.2s;
+}
+.elem:hover #overlay{
+    top: 0;
+}
+/* #elem-container{
+    /* background-color: red; */
+
+#fixed-img{
+    height: 30vh;
+    width:25vw;
+    background-color: red;
+    border-radius: 10; 
+    position: fixed;
+    z-index: 99;
+    left: 50%;
+    top: 25%;
+    display:none;
+    background-position: center;
+    background-size: cover;
+}
+ 
+#page4{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    position: relative;
+    display: flex;
+    border-radius: 5%;
+    
+}
+#leftside
+{
+height:100vh;
+width: 100vw;
+/* align-items: center; */
+font-size: 500;
+background-color: black;
+color: white;
+border-radius: 5%;
+padding: 10% 5%;
+align-items: center;
+justify-content: center;
+
+}
+#leftside h3 {
+ color: white;
+ /* margin-top: 80px; */
+ padding:1vh;
+font-size: 50px;
+}
+#leftside
+#leftside h3.pro{
+    color: grey;
+}
+#leftside p{
+
+    font-size:10px;
+    align-items: center;
+}
+#leftside h3#design .pipe{
+    color:red;
+}
+#leftside h3#design .design{
+    color: white;;
+}
+
+/* #rightside
+{
+height: 30vh;
+width: 30vw;
+border-radius: 1px solid black;
+} */
+#rightside {
+    height: 100vh;
+    width: 100vw;
+    border: 1px solid black; /* Set a border with a specific width, style, and color */
+    border-radius: 10px; /* Adjust the radius to get rounded corners */
+    overflow: hidden;
+}
+#rightside img {
+    height: 100%;
+    width: 105%;
+    object-fit: cover; /* Ensures the image covers the entire div while preserving aspect ratio */
+}
+#page5{
+    height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    padding: 8vw 2vw ;
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+
+  .swiper-slide {
+    /* text-align: center; */
+    font-size: 18px;
+    background: #fff;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    border: 1px solid black;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .swiper-slide {
+    width:30%;
+  }
+
+  /* .swiper-slide:nth-child(2n) {
+    width: 40%;
+  }
+
+  .swiper-slide:nth-child(3n) {
+    width: 20%;
+  } */
+
+#page6{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #120b02;
+}
+/* #footer{
+position: fixed;
+height: 100vh;
+width: 100%;
+background-color: black;
+color: white;
+z-index: 9;
+bottom: 0;
+display: flex;
+/* align-items: flex-end; */
+/* justify-content:flex-end ;
+flex-direction: column;
+font-size: 2vh;
+} */ 
+/* #footer{
+    position: fixed;
+    height: 500px;
+    width: 100%;
+    background-color: black;
+    color: white;
+     z-index:9;
+    bottom:0; 
+    display: flex;
+    justify-content: flex-end; 
+    flex-direction: column;
+    font-size: 2vh;
+    padding: 10px; 
+     /* Add paddin for better layout */
+/* } */
+
+ /* #footer-div{
+height: 20vh;
+width: 100%;
+/* background-color: red; */
+
+/* }  
+#footer h1{
+    padding: 50px 50px 50px 50px;
+    font-size: 100px;
+    align-items: center;
+  
+} */ 
+#footer {
+    position:relative;
+    height: 20vh;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    z-index: 9;
+    bottom: 0;
+    display: flex;
+    /* align-items: flex-end; */
+    justify-content: flex-end;
+    flex-direction: column;
+    padding: 1vw 3vw;
+}
+
+#footer h1 {
+    font-size: 2vw;
+}
+
+#footer-div {
+    height: 20vh;
+    width: 100%;
+    background-color: red;
+}
+
+#footer-bottom {
+    border-top: 1px solid #dadada;
+    height: 10vh;
+    width: 100%;
+}
+@media(max-width:600px) {
+    #page1{
+        min-height: 100vh;
+        width: 100%;
+        background-color:#EFEAE3;
+        padding:  0vw 5vw;
+        }
+        nav{
+            /* height: 100px; */
+            padding: 2vw 2vw;
+            width: 100%;
+            /* background-color: red; */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8vw 0;
+        }
+        nav img{
+       scale: 0.8;
+        }
+        .nav-part2{
+            display:flex;
+            align-items: center;
+            gap: 1vw;
+        }
+        .nav-part2 h3{
+           padding: 10px 20px;
+           border: 1px solid rgba(0, 0, 0, 0.308);
+           border-radius: 35%;
+           font-weight: 800;
+           color: rgba(7, 1, 1, 0.762);
+           font-size: 18px;
+           overflow: hidden;
+           position: relative;
+            
+        }  
+        .nav-part2 h3::after{
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 100%;
+        background-color: black;
+        /* mix-blend-mode: difference; */
+        left: 0;
+        bottom: -100%;
+        border-radius: 50%;
+        transition: all ease 0.4s;
+        overflow: hidden;
+        }
+        .nav-part2 h3:hover::after{
+            bottom: 0%;
+            border-radius: 0%;
+        }
+        .nav-part2 h3 a{
+            color:black;
+            text-decoration: none;
+            position: relative;
+             z-index: 9;
+            }
+            .nav-part2 h3:hover a{
+                color: white;
+            }
+}
